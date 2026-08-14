@@ -106,6 +106,9 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        img { max-width: 100%; }
+        html { overflow-x: hidden; }
+        body { overflow-x: hidden; }
         html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-body);
@@ -304,8 +307,8 @@
         }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
         .booking-form-wrap input, .booking-form-wrap select, .booking-form-wrap textarea {
-            width: 100%; padding: 15px 18px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; font-family: var(--font-body); font-size: 15px;
-            transition: var(--transition); background: #fff; color: var(--brand-dark);
+            width: 100%; padding: 15px 18px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; font-family: var(--font-body); font-size: 16px;
+            transition: var(--transition); background: #fff; color: var(--brand-dark); box-sizing: border-box;
         }
         .booking-form-wrap input:focus, .booking-form-wrap select:focus, .booking-form-wrap textarea:focus {
             outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 4px rgba(132,72,42,0.06);
@@ -462,6 +465,32 @@
             .booking-form-wrap { padding: 30px 20px; }
             .hero-content h1 { font-size: 38px; }
         }
+    
+        /* Small phones */
+        @media (max-width: 480px) {
+            .header-inner { padding: 0 18px; }
+            .container { padding: 0 18px; }
+            .logo img { height: 42px; }
+            .site-header.scrolled .logo img { height: 36px; }
+            .site-header { padding: 14px 0; }
+            .site-header.scrolled { padding: 8px 0; }
+            .section { padding: 45px 0; }
+            .section-title { font-size: 26px; }
+            .page-hero-content h1 { font-size: 30px; }
+            .hero-content h1 { font-size: 30px !important; }
+            .sidebar-widget { padding: 20px; }
+            .hero-tag { padding: 6px 16px; font-size: 12px; letter-spacing: 2px; }
+            .hero-content p { font-size: 15px !important; }
+            .btn-primary, .btn-outline { padding: 13px 26px; font-size: 14px; width: 100%; justify-content: center; }
+            .hero-buttons { width: 100%; max-width: 300px; margin: 0 auto; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px; }
+            .mobile-book-float { bottom: 16px; right: 16px; width: 52px; height: 52px; }
+            .testimonial-card { padding: 24px 20px; }
+            .btn-book { padding: 11px 22px; font-size: 14px; }
+            .testimonial-card { padding: 22px; }
+            .feature-card { height: 300px; }
+            .place-card .img-wrap { height: 140px; }
+        }
     </style>
 </head>
 <body>
@@ -480,20 +509,7 @@
         <a href="#tours">Tours</a>
                 <a href="our-story.html">Our Story</a>
         <a href="#destination">Destinations</a>
-        <a href="serengeti.html" style="font-size:16px; padding-left:20px;">- Serengeti</a>
-        <a href="ngorongoro.html" style="font-size:16px; padding-left:20px;">- Ngorongoro</a>
-        <a href="kilimanjaro.html" style="font-size:16px; padding-left:20px;">- Kilimanjaro</a>
-        <a href="tarangire.html" style="font-size:16px; padding-left:20px;">- Tarangire</a>
-        <a href="manyara.html" style="font-size:16px; padding-left:20px;">- Lake Manyara</a>
-        <a href="ruaha.html" style="font-size:16px; padding-left:20px;">- Ruaha</a>
-        <a href="mikumi.html" style="font-size:16px; padding-left:20px;">- Mikumi</a>
-        <a href="nyerere.html" style="font-size:16px; padding-left:20px;">- Nyerere</a>
-        <a href="kitulo.html" style="font-size:16px; padding-left:20px;">- Kitulo</a>
-        <a href="mahale.html" style="font-size:16px; padding-left:20px;">- Lake Natron</a>
-        <a href="udzungwa.html" style="font-size:16px; padding-left:20px;">- Udzungwa</a>
-        <a href="gombe.html" style="font-size:16px; padding-left:20px;">- Gombe</a>
-        <a href="arusha.html" style="font-size:16px; padding-left:20px;">- Arusha NP</a>
-        
+        <a href="destinations.html" style="color: var(--brand-highlight); font-weight:600;">View All Destinations <i class="fas fa-arrow-right" style="font-size:12px;"></i></a>
         <a href="contact.html">Contact</a>
         <a href="#book" class="btn-book">Book Now <i class="fas fa-paper-plane"></i></a>
     </div>
@@ -797,7 +813,7 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/guxsafaris" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/guxsafaris" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/255615743844?text=hello%20Tanzania%20Safaris%20Seekers!%20I%20would%20like%20to%20book%20safari." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/255615743844?text=Hello%20GUX%20Safaris!%20I%20would%20like%20to%20book%20a%20safari." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -806,11 +822,7 @@
                 <p class="geek-credit">Crafted by <a href="https://geekstudio.tz" target="_blank" rel="noopener">Geek Studio</a></p>
             </div>
         </div>
-    </footer>
-
-   
-
-    <script>
+    </footer><script>
         // Preloader
         window.addEventListener('load', () => setTimeout(() => document.getElementById('preloader').classList.add('fade-out'), 1000));
 

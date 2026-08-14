@@ -36,22 +36,28 @@
 
     .modal-content {
         background: #FAF0D9;
-        margin: 3% auto;
-        padding: 20px;
-        width: 400px;
+        margin: 5% auto;
+        padding: 24px 20px;
+        width: 92%;
+        max-width: 420px;
+        border-radius: 14px;
         position: relative;
         text-align: center;
-        float: right;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
 
     .modal-content .select,
     .modal-content .input,
     .modal-content .button {
-        width: 90%;
-        padding: 10px;
+        width: 100%;
+        padding: 12px;
         margin: 8px 0;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
     }
 
     .button {
@@ -67,11 +73,16 @@
         color: #25402f;
     }
 
+    .modal-content img { max-width: 60%; height: auto; }
+    .modal-content .h2 { font-size: 19px; margin: 10px 0 18px; }
+
     .close {
         position: absolute;
-        right: 10px;
-        top: 10px;
+        right: 12px;
+        top: 8px;
         font-size: 30px;
+        line-height: 1;
+        padding: 6px 10px;
         cursor: pointer;
     }
 
@@ -94,7 +105,7 @@
                 <input class="input" type="email" name="email" placeholder="example@gmail.com" required><br>
                 <input class="input" type="tel" name="phone" placeholder="Phone Number (Country Code format)" required><br>
                 <input class="input" type="text" name="location" placeholder="Location" required><br>
-                <select style="width: 380px;" class="select">
+                <select class="select">
                     <option value="">Choose Your Experience</option>
                     <option value="kilimanjaro">Mount Kilimanjaro Trek</option>
                     <option value="serengeti">Serengeti Safari</option>
@@ -113,7 +124,7 @@
                     <option value="maasai-heritage">Maasai Cultural Experience</option>
                 </select>
                 <input class="input" type="date" name="date" required><br>
-                <button type="submit"style="width: 380px;" class="button">Book</button>
+                <button type="submit" class="button" style="margin-top:12px;">Book</button>
             </form>
         </div>
     </div>

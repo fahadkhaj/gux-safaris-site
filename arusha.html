@@ -62,6 +62,9 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        img { max-width: 100%; }
+        html { overflow-x: hidden; }
+        body { overflow-x: hidden; }
         html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-body);
@@ -203,8 +206,8 @@
         .sidebar-widget h4 { font-family: var(--font-heading); font-size: 20px; margin-bottom: 20px; color: var(--brand-dark); }
         .sidebar-booking-form input, .sidebar-booking-form select, .sidebar-booking-form textarea {
             width: 100%; padding: 14px 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px;
-            font-family: var(--font-body); font-size: 15px; transition: var(--transition); background: var(--brand-cream);
-            margin-bottom: 15px;
+            font-family: var(--font-body); font-size: 16px; transition: var(--transition); background: var(--brand-cream);
+            margin-bottom: 15px; box-sizing: border-box;
         }
         .sidebar-booking-form input:focus, .sidebar-booking-form select:focus, .sidebar-booking-form textarea:focus {
             outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 4px rgba(132,72,42,0.06);
@@ -277,6 +280,34 @@
             .itinerary-tabs button { flex: 1; min-width: 100px; }
             .related-grid { grid-template-columns: 1fr; }
         }
+    
+        /* Small phones */
+        @media (max-width: 480px) {
+            .header-inner { padding: 0 18px; }
+            .container { padding: 0 18px; }
+            .logo img { height: 42px; }
+            .site-header.scrolled .logo img { height: 36px; }
+            .site-header { padding: 14px 0; }
+            .site-header.scrolled { padding: 8px 0; }
+            .section { padding: 45px 0; }
+            .section-title { font-size: 26px; }
+            .page-hero-content h1 { font-size: 30px; }
+            .hero-content h1 { font-size: 30px !important; }
+            .sidebar-widget { padding: 20px; }
+            .btn-book { padding: 11px 22px; font-size: 14px; }
+            .testimonial-card { padding: 22px; }
+            .feature-card { height: 300px; }
+            .place-card .img-wrap { height: 140px; }
+        }
+    
+        /* Mobile Sticky Book Button */
+        .mobile-book-float {
+            display: none; position: fixed; bottom: 20px; right: 20px; z-index: 100; background: var(--brand-highlight);
+            color: var(--brand-dark); width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            align-items: center; justify-content: center; font-size: 24px; text-decoration: none; transition: var(--transition);
+        }
+        .mobile-book-float:hover { transform: scale(1.1); }
+        @media (max-width: 1024px) { .mobile-book-float { display: flex; } }
     </style>
 </head>
 <body>
@@ -292,20 +323,7 @@
         <a href="index.html#tours">Tours</a>
                 <a href="our-story.html">Our Story</a>
         <a href="index.html#destination">Destinations</a>
-        <a href="serengeti.html" style="font-size:16px; padding-left:20px;">- Serengeti</a>
-        <a href="ngorongoro.html" style="font-size:16px; padding-left:20px;">- Ngorongoro</a>
-        <a href="kilimanjaro.html" style="font-size:16px; padding-left:20px;">- Kilimanjaro</a>
-        <a href="tarangire.html" style="font-size:16px; padding-left:20px;">- Tarangire</a>
-        <a href="manyara.html" style="font-size:16px; padding-left:20px;">- Lake Manyara</a>
-        <a href="ruaha.html" style="font-size:16px; padding-left:20px;">- Ruaha</a>
-        <a href="mikumi.html" style="font-size:16px; padding-left:20px;">- Mikumi</a>
-        <a href="nyerere.html" style="font-size:16px; padding-left:20px;">- Nyerere</a>
-        <a href="kitulo.html" style="font-size:16px; padding-left:20px;">- Kitulo</a>
-        <a href="mahale.html" style="font-size:16px; padding-left:20px;">- Lake Natron</a>
-        <a href="udzungwa.html" style="font-size:16px; padding-left:20px;">- Udzungwa</a>
-        <a href="gombe.html" style="font-size:16px; padding-left:20px;">- Gombe</a>
-        <a href="arusha.html" style="font-size:16px; padding-left:20px;">- Arusha NP</a>
-        
+        <a href="destinations.html" style="color: var(--brand-highlight); font-weight:600;">View All Destinations <i class="fas fa-arrow-right" style="font-size:12px;"></i></a>
         <a href="contact.html">Contact</a>
         <a href="index.html#book" class="btn-book">Book Now <i class="fas fa-paper-plane"></i></a>
     </div>
@@ -543,7 +561,7 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/guxsafaris" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/guxsafaris" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/255615743844?text=hello%20Tanzania%20Safaris%20Seekers!%20I%20would%20like%20to%20book%20safari." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/255615743844?text=Hello%20GUX%20Safaris!%20I%20would%20like%20to%20book%20a%20safari." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -552,22 +570,7 @@
                 <p class="geek-credit">Crafted by <a href="https://geekstudio.tz" target="_blank" rel="noopener">Geek Studio</a></p>
             </div>
         </div>
-    </footer>
-
-    <!-- Tawk.to -->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/6928a9b91e4dc61962a10423/1jb3ddvoq';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-
-    <script>
+    </footer><script>
         window.addEventListener('load', () => setTimeout(() => document.getElementById('preloader').classList.add('fade-out'), 800));
         window.addEventListener('scroll', () => document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60));
         document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('active'));
@@ -616,5 +619,6 @@
         });
     })();
     </script>
+    <a href="#book" class="mobile-book-float"><i class="fas fa-paper-plane"></i></a>
 </body>
 </html>

@@ -951,18 +951,6 @@
     </div>
   </div>
     
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6928a9b91e4dc61962a10423/1jb3ddvoq';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
 <!--End of Tawk.to Script-->
 <noscript><a href="https://www.livechat.com/chat-with/19348799/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 <!-- End of LiveChat code -->
@@ -1023,7 +1011,15 @@ s0.parentNode.insertBefore(s1,s0);
         from { bottom: 30px; opacity: 1; }
         to { bottom: 10px; opacity: 0; }
       }
-    </style>
+    
+    .mobile-book-float {
+        display: none; position: fixed; bottom: 20px; right: 20px; z-index: 100; background: #C17A45;
+        color: #2E1B10; width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        align-items: center; justify-content: center; font-size: 24px; text-decoration: none; transition: 0.3s ease;
+    }
+    .mobile-book-float:hover { transform: scale(1.1); }
+    @media (max-width: 1024px) { .mobile-book-float { display: flex; } }
+</style>
 
     <div id="fengtech-toast">Right click is disabled by Fengtech</div>
 
@@ -1083,6 +1079,7 @@ s0.parentNode.insertBefore(s1,s0);
         });
     })();
     </script>
+  <a href="#book" class="mobile-book-float"><i class="fas fa-paper-plane"></i></a>
 </body>
 
 </html>
