@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Safari – GUX Safaris</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'Jura';
+        src: url('assets/fonts/fontawesome/Jura/static/Jura-Regular.ttf') format('truetype');
+        font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+        font-family: 'Jura';
+        src: url('assets/fonts/fontawesome/Jura/static/Jura-Bold.ttf') format('truetype');
+        font-weight: 700; font-style: normal; font-display: swap;
+    }
+
+    .h2 {
+        color: #25402f;
+        font-family: 'Jura', sans-serif;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+    }
+
+    .modal-content {
+        background: #FAF0D9;
+        margin: 3% auto;
+        padding: 20px;
+        width: 400px;
+        position: relative;
+        text-align: center;
+        float: right;
+    }
+
+    .modal-content .select,
+    .modal-content .input,
+    .modal-content .button {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .button {
+        background: #25402f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .button:hover {
+        background: #C17A45;
+        color: #25402f;
+    }
+
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .input {
+        border: 1px solid rgba(11, 61, 44, 0.1);
+    }
+</style>
+
+<body>
+    
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+           
+            <img src="assets/images/logo/gux-logo-horizontal-dark.png" alt="GUX Safaris" width="170px">
+             <h2 class="h2">Book Your Safari Tour with GUX Safaris</h2>
+            <form action="booking.php" method="post">
+                <input class="input" type="text" name="name" placeholder="Your Name" required><br>
+                <input class="input" type="email" name="email" placeholder="example@gmail.com" required><br>
+                <input class="input" type="tel" name="phone" placeholder="Phone Number (Country Code format)" required><br>
+                <input class="input" type="text" name="location" placeholder="Location" required><br>
+                <select style="width: 380px;" class="select">
+                    <option value="">Choose Your Experience</option>
+                    <option value="kilimanjaro">Mount Kilimanjaro Trek</option>
+                    <option value="serengeti">Serengeti Safari</option>
+                    <option value="ngorongoro">Ngorongoro Crater Tour</option>
+                    <option value="tarangire">Tarangire National Park Safari</option>
+                    <option value="manyara">Lake Manyara Adventure</option>
+                    <option value="arusha">Arusha National Park</option>
+                    <option value="ruaha">Ruaha National Park</option>
+                    <option value="mikumi">Mikumi National Park</option>
+                    <option value="nyerere">Nyerere National Park</option>
+                    <option value="udzungwa">Udzungwa National Park</option>
+                    <option value="gombe">Gombe National Park</option>
+                    <option value="mahale">Mahale Mountains National Park</option>
+                    <option value="kitulo">Kitulo National Park</option>
+                    <option value="zanzibar">Zanzibar Beach Tour</option>
+                    <option value="maasai-heritage">Maasai Cultural Experience</option>
+                </select>
+                <input class="input" type="date" name="date" required><br>
+                <button type="submit"style="width: 380px;" class="button">Book</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            if (!sessionStorage.getItem("popupShown")) {
+                document.getElementById("bookingModal").style.display = "block";
+                sessionStorage.setItem("popupShown", "true");
+            }
+        };
+        document.querySelector(".close").onclick = () => {
+            document.getElementById("bookingModal").style.display = "none";
+        };
+    </script>
+    
+
+    <script>
+    (function() {
+        var msgText = "Thanks! Your request has been received — our GUX Safaris team will reach out on WhatsApp or email shortly.";
+        document.querySelectorAll('form[action$=".php"]').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"], input[type="submit"]');
+                var original = btn ? btn.innerHTML : null;
+                if (btn) { btn.innerHTML = 'Sending…'; btn.disabled = true; }
+                setTimeout(function() {
+                    var existing = form.querySelector('.gux-form-success');
+                    if (!existing) {
+                        var msg = document.createElement('div');
+                        msg.className = 'gux-form-success';
+                        msg.style.cssText = 'margin-top:16px;padding:14px 18px;background:#3D2314;color:#FAF0D9;border-radius:8px;font-weight:500;font-family:inherit;';
+                        msg.textContent = msgText;
+                        form.appendChild(msg);
+                    }
+                    form.reset();
+                    if (btn) { btn.innerHTML = original; btn.disabled = false; }
+                }, 700);
+            });
+        });
+    })();
+    </script>
+</body>
+
+</html>

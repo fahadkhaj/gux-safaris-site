@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitulo National Park – Flower & Wildlife Safari Tanzania | GUX Safaris</title>
+    <meta name="description" content="Discover Kitulo National Park, the 'Serengeti of Flowers'. Explore alpine meadows, wildflowers, rare orchids, and birdwatching in Tanzania's southern highlands.">
+    <link rel="canonical" href="https://guxsafaris.com/kitulo.html">
+    <link rel="icon" href="assets/images/logo/gux-icon-mark.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kitulo National Park – Flower & Wildlife Safari Tanzania">
+    <meta property="og:description" content="Tanzania's botanical paradise. Wildflower meadows, rare orchids, and highland birdlife.">
+    <meta property="og:image" content="https://guxsafaris.com/assets/images/service/ki1.jpg">
+    <meta property="og:url" content="https://guxsafaris.com/kitulo.html">
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon_gowilds.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Jura';
+            src: url('assets/fonts/fontawesome/Jura/static/Jura-Regular.ttf') format('truetype');
+            font-weight: 400; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Jura';
+            src: url('assets/fonts/fontawesome/Jura/static/Jura-Medium.ttf') format('truetype');
+            font-weight: 500; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Jura';
+            src: url('assets/fonts/fontawesome/Jura/static/Jura-SemiBold.ttf') format('truetype');
+            font-weight: 600; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Jura';
+            src: url('assets/fonts/fontawesome/Jura/static/Jura-Bold.ttf') format('truetype');
+            font-weight: 700; font-style: normal; font-display: swap;
+        }
+
+        :root {
+            --brand-dark: #2E1B10;
+            --brand-gold: #84482A;
+            --brand-highlight: #C17A45;
+            --brand-forest: #3D2314;
+            --brand-cream: #FAF0D9;
+            --text-muted: #484848;
+            --font-heading: 'Jura', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --shadow-sm: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-lg: 0 20px 50px rgba(0,0,0,0.1);
+            --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            color: var(--brand-dark);
+            background-color: var(--brand-cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; }
+
+        /* Preloader */
+        .preloader {
+            position: fixed; inset: 0; background: #fff; z-index: 99999;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .preloader.fade-out { opacity: 0; visibility: hidden; }
+        .preloader img { width: 180px; animation: pulse 1.5s ease-in-out infinite; }
+        @keyframes pulse { 0%,100%{transform:scale(1);opacity:.8} 50%{transform:scale(1.05);opacity:1} }
+
+        /* Header */
+        .site-header {
+            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 18px 0; transition: var(--transition);
+        }
+        .site-header.scrolled {
+            background: rgba(46,27,16,0.94); backdrop-filter: blur(12px); padding: 10px 0; box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+        }
+        .header-inner {
+            max-width: 1350px; margin: 0 auto; padding: 0 30px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo img { height: 68px; transition: var(--transition); }
+        .site-header.scrolled .logo img { height: 52px; }
+
+        .main-nav { display: flex; align-items: center; gap: 30px; }
+        .main-nav a {
+            color: #fff; text-decoration: none; font-weight: 500; font-size: 15px; text-transform: uppercase; letter-spacing: 0.8px;
+            position: relative; transition: var(--transition); font-family: var(--font-body);
+        }
+        .main-nav a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--brand-highlight);
+            transition: var(--transition); border-radius: 1px;
+        }
+        .main-nav a:hover { color: var(--brand-highlight); }
+        .main-nav a:hover::after { width: 100%; }
+
+        .dropdown { position: relative; }
+        .dropdown > a { display: flex; align-items: center; gap: 5px; }
+        .dropdown-menu {
+            position: absolute; top: 100%; left: 0;
+            background: rgba(46,27,16,0.97); backdrop-filter: blur(15px);
+            min-width: 280px; padding: 15px 0; border-radius: 10px; margin-top: 10px;
+            opacity: 0; visibility: hidden; transform: translateY(-10px);
+            transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 999;
+        }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-menu a {
+            display: block; padding: 10px 25px; font-size: 14px; text-transform: none;
+            letter-spacing: 0; color: #fff; transition: all 0.2s; white-space: nowrap;
+        }
+        .dropdown-menu a:hover { background: rgba(255,255,255,0.1); color: var(--brand-highlight); }
+        .dropdown-menu a::after { display: none; }
+
+        .btn-book {
+            background: var(--brand-highlight); color: var(--brand-dark) !important; padding: 13px 28px; border-radius: 50px;
+            font-weight: 600 !important; box-shadow: 0 6px 20px rgba(193,122,69,0.35); transition: var(--transition);
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .btn-book:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(193,122,69,0.5); }
+
+        .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; padding: 8px; }
+        .mobile-menu {
+            position: fixed; top: 0; right: -320px; width: 300px; height: 100vh; background: rgba(46,27,16,0.97); backdrop-filter: blur(15px);
+            z-index: 9999; padding: 70px 30px 30px; transition: var(--transition); display: flex; flex-direction: column; gap: 10px;
+            overflow-y: auto;
+        }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu a {
+            color: #fff; text-decoration: none; font-size: 18px; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-family: var(--font-body);
+        }
+        .mobile-menu .btn-book { text-align: center; margin-top: 15px; }
+        .mobile-close { position: absolute; top: 20px; right: 25px; background: none; border: none; color: #fff; font-size: 26px; cursor: pointer; }
+
+        /* Hero */
+        .page-hero {
+            position: relative; height: 60vh; min-height: 400px; display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: center;
+        }
+        .page-hero .overlay {
+            position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(46,27,16,0.85) 100%);
+        }
+        .page-hero-content {
+            position: relative; z-index: 2; text-align: center; color: #fff; padding: 0 20px;
+        }
+        .page-hero-content h1 {
+            font-family: var(--font-heading); font-size: clamp(40px, 6vw, 72px); font-weight: 700; margin-bottom: 15px;
+        }
+
+        /* Sections */
+        .section { padding: 80px 0; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 30px; }
+        .section-tag {
+            display: inline-block; background: rgba(132,72,42,0.1); color: var(--brand-gold); padding: 8px 20px; border-radius: 50px;
+            font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; font-family: var(--font-body);
+        }
+        .section-title {
+            font-family: var(--font-heading); font-size: clamp(28px, 4vw, 44px); font-weight: 700; margin-bottom: 18px;
+            color: var(--brand-dark); line-height: 1.2;
+        }
+
+        .content-grid { display: grid; grid-template-columns: 1fr 350px; gap: 50px; margin-top: 40px; }
+        .main-content { font-family: var(--font-body); color: var(--text-muted); }
+        .main-content h3 { font-family: var(--font-heading); font-size: 28px; color: var(--brand-dark); margin-bottom: 15px; }
+        .main-content h4 { font-family: var(--font-heading); font-size: 22px; color: var(--brand-dark); margin-top: 30px; margin-bottom: 10px; }
+        .main-content p { margin-bottom: 20px; }
+        .check-list { list-style: none; margin-bottom: 30px; }
+        .check-list li { padding: 6px 0; display: flex; align-items: center; gap: 10px; }
+        .check-list li i { color: var(--brand-gold); font-size: 18px; }
+
+        .itinerary-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 30px 0; }
+        .itinerary-tabs button {
+            background: var(--brand-cream); border: 1px solid rgba(0,0,0,0.1);
+            padding: 12px 24px; border-radius: 50px; font-family: var(--font-body); font-weight: 500; font-size: 15px;
+            cursor: pointer; transition: var(--transition);
+        }
+        .itinerary-tabs button.active {
+            background: var(--brand-highlight); color: var(--brand-dark); border-color: var(--brand-highlight);
+            font-weight: 600; box-shadow: 0 6px 20px rgba(193,122,69,0.35);
+        }
+        .itinerary-panel { display: none; animation: fade 0.4s ease; }
+        .itinerary-panel.active { display: block; }
+        @keyframes fade { from{opacity:0;transform:translateX(10px)} to{opacity:1;transform:translateX(0)} }
+
+        /* Sidebar */
+        .sidebar { position: sticky; top: 100px; align-self: start; }
+        .sidebar-widget { background: #fff; border-radius: 20px; padding: 30px; box-shadow: var(--shadow-sm); margin-bottom: 30px; }
+        .sidebar-widget h4 { font-family: var(--font-heading); font-size: 20px; margin-bottom: 20px; color: var(--brand-dark); }
+        .sidebar-booking-form input, .sidebar-booking-form select, .sidebar-booking-form textarea {
+            width: 100%; padding: 14px 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px;
+            font-family: var(--font-body); font-size: 15px; transition: var(--transition); background: var(--brand-cream);
+            margin-bottom: 15px;
+        }
+        .sidebar-booking-form input:focus, .sidebar-booking-form select:focus, .sidebar-booking-form textarea:focus {
+            outline: none; border-color: var(--brand-gold); box-shadow: 0 0 0 4px rgba(132,72,42,0.06);
+        }
+        .sidebar-booking-form textarea { min-height: 90px; resize: vertical; }
+        .sidebar-booking-form .btn-submit {
+            background: var(--brand-highlight); color: var(--brand-dark); padding: 16px 36px; border-radius: 50px;
+            font-weight: 600; font-size: 16px; border: none; cursor: pointer; display: inline-flex; align-items: center;
+            gap: 10px; transition: var(--transition); box-shadow: 0 6px 20px rgba(193,122,69,0.35);
+        }
+        .sidebar-booking-form .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(193,122,69,0.5); }
+        .info-list { list-style: none; }
+        .info-list li { padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 8px; }
+        .info-list li span { font-weight: 500; color: var(--brand-dark); }
+        .info-list li i { color: var(--brand-gold); }
+
+        /* Related */
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; margin-top: 40px; }
+        .related-card {
+            background: #fff; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);
+        }
+        .related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .related-card img { width: 100%; height: 180px; object-fit: cover; }
+        .related-card .card-body { padding: 20px; }
+        .related-card .card-body h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 5px; }
+        .related-card .card-body h4 a { text-decoration: none; color: var(--brand-dark); transition: var(--transition); }
+        .related-card .card-body h4 a:hover { color: var(--brand-gold); }
+        .related-card .card-body p { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+        .related-card .card-body .meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
+        .gallery-grid img { width: 100%; height: 260px; object-fit: cover; border-radius: 14px; transition: var(--transition); cursor: pointer; }
+        .gallery-grid img:hover { transform: scale(1.03); box-shadow: var(--shadow-lg); }
+
+        /* Footer */
+        .footer { background: var(--brand-forest); color: rgba(255,255,255,0.8); padding: 80px 0 30px; font-family: var(--font-body); }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 50px; margin-bottom: 50px; }
+        .footer h4 { font-family: var(--font-heading); font-weight: 600; color: #fff; margin-bottom: 22px; font-size: 18px; }
+        .footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: var(--transition); }
+        .footer a:hover { color: var(--brand-highlight); }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 10px; }
+        .social-links { display: flex; gap: 12px; margin-top: 20px; }
+        .social-links a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+        .social-links a:hover { background: var(--brand-highlight); color: var(--brand-dark); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+        .geek-credit { color: rgba(255,255,255,0.55); font-size: 12px; }
+        .geek-credit a { color: rgba(255,255,255,0.7); text-decoration: none; font-weight:500; }
+        .geek-credit a:hover { color: var(--brand-highlight); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .main-nav { display: none; }
+            .menu-toggle { display: block; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .section { padding: 50px 0; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+            .itinerary-tabs button { flex: 1; min-width: 100px; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <img src="assets/images/logo/gux-logo-horizontal-dark.png" alt="GUX Safaris">
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="index.html#tours">Tours</a>
+                <a href="our-story.html">Our Story</a>
+        <a href="index.html#destination">Destinations</a>
+        <a href="serengeti.html">- Serengeti</a>
+        <a href="ngorongoro.html">- Ngorongoro</a>
+        <a href="kilimanjaro.html">- Kilimanjaro</a>
+        <a href="tarangire.html">- Tarangire</a>
+        <a href="manyara.html">- Lake Manyara</a>
+        <a href="ruaha.html">- Ruaha</a>
+        <a href="mikumi.html">- Mikumi</a>
+        <a href="nyerere.html">- Nyerere</a>
+        <a href="kitulo.html">- Kitulo</a>
+        <a href="mahale.html">- Lake Natron</a>
+        <a href="udzungwa.html">- Udzungwa</a>
+        <a href="gombe.html">- Gombe</a>
+        <a href="arusha.html">- Arusha NP</a>
+        
+        <a href="contact.html">Contact</a>
+        <a href="index.html#book" class="btn-book">Book Now <i class="fas fa-paper-plane"></i></a>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo/gux-logo-horizontal-light.png" alt="GUX Safaris">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#tours">Tours</a>
+                <a href="our-story.html">Our Story</a>
+                <div class="dropdown">
+                    <a href="index.html#destination">Destinations <i class="fas fa-chevron-down" style="font-size:10px; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="destinations.html" style="font-weight:600;">View All Destinations →</a>
+                        <a href="serengeti.html">Serengeti National Park</a>
+                        <a href="ngorongoro.html">Ngorongoro Crater</a>
+                        <a href="kilimanjaro.html">Mount Kilimanjaro</a>
+                        <a href="tarangire.html">Tarangire National Park</a>
+                        <a href="manyara.html">Lake Manyara</a>
+                        <a href="ruaha.html">Ruaha National Park</a>
+                        <a href="mikumi.html">Mikumi National Park</a>
+                        <a href="nyerere.html">Nyerere National Park</a>
+                        <a href="kitulo.html">Kitulo National Park</a>
+                        <a href="mahale.html">Lake Natron</a>
+                        <a href="udzungwa.html">Udzungwa Mountains</a>
+                        <a href="gombe.html">Gombe Stream</a>
+                        <a href="arusha.html">Arusha National Park</a>
+                    </div>
+                </div>
+                
+                <a href="contact.html">Contact</a>
+                <a href="index.html#book" class="btn-book">Book Now <i class="fas fa-paper-plane"></i></a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero" style="background-image: url('assets/images/service/ki1.jpg');">
+        <div class="overlay"></div>
+        <div class="page-hero-content">
+            <h1>Kitulo National Park</h1>
+            <p>The "Serengeti of Flowers" – a botanical paradise in Tanzania's southern highlands</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section" style="background: var(--brand-cream);">
+        <div class="container">
+            <div class="content-grid reveal">
+                <div class="main-content">
+                    <h3>Discover the Wonders of Kitulo National Park</h3>
+                    <p>Known as the "Serengeti of Flowers," Kitulo National Park is a breathtaking botanical paradise located in Tanzania's southern highlands. Set between the peaks of the Kipengere and Poroto mountains, the park is famed for its vibrant wildflower displays, rare orchids, and alpine grasslands. It's a haven for botanists, hikers, birdwatchers, and nature lovers looking for peaceful beauty far from the traditional safari routes.</p>
+                    <p>Often called the "Garden of God," Kitulo is the first national park in tropical Africa established to protect its floral diversity. From carpets of vibrant orchids and endemic plants to scenic hiking trails and panoramic views, every visit offers a serene yet unforgettable adventure.</p>
+                    <p>Whether you're trekking the misty highlands, spotting rare species like the Denham's bustard and mountain reedbuck, or simply soaking in the tranquil beauty of alpine meadows, Kitulo offers a truly unique escape into nature's quieter wonders.</p>
+
+                    <h4>Advanced Facilities – Kitulo National Park</h4>
+                    <p>Your Kitulo adventure blends natural serenity with essential comforts to ensure a safe and enriching experience in Tanzania's highlands. While the park is more remote and less commercialized than others, it offers the necessary infrastructure for eco-tourism and adventure travel.</p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-angle-right"></i> Guided pick-up and drop-off services from Mbeya Airport or nearby towns</li>
+                        <li><i class="fas fa-angle-right"></i> Designated parking at park entry points and trailheads</li>
+                        <li><i class="fas fa-angle-right"></i> Basic but well-maintained campsites and eco-lodges near the park</li>
+                        <li><i class="fas fa-angle-right"></i> Clean water access and solar-powered amenities at selected accommodations</li>
+                        <li><i class="fas fa-angle-right"></i> Park rangers and guides available for safe trekking and plant exploration</li>
+                        <li><i class="fas fa-angle-right"></i> Informational briefings about the region's unique flora and ecology</li>
+                        <li><i class="fas fa-angle-right"></i> Meals available at nearby lodges (special diets accommodated with advance notice)</li>
+                        <li><i class="fas fa-angle-right"></i> Opportunities for photography, botany tours, and birdwatching</li>
+                    </ul>
+
+                    <h4>Tour Plan</h4>
+                    <p>Discover the natural beauty of Kitulo National Park with an itinerary designed for nature lovers. From colorful alpine meadows to highland birdlife and scenic hikes, each day brings peaceful exploration and unforgettable moments in Tanzania's floral paradise.</p>
+
+                    <div class="itinerary-tabs" id="itineraryTabs">
+                        <button class="active" data-tab="day1">Day 1</button>
+                        <button data-tab="day2">Day 2</button>
+                        <button data-tab="day3">Day 3</button>
+                    </div>
+                    <div class="itinerary-content">
+                        <div class="itinerary-panel active" id="day1">
+                            <p>Depart from Mbeya in the morning and enjoy a scenic drive through the Southern Highlands to Kitulo National Park. Arrive around midday and check into your eco-lodge or campsite near the park. After lunch, take a light guided walk to get your first look at the beautiful alpine meadows and wildflower zones.</p>
+                            <ul class="check-list">
+                                <li><i class="fas fa-angle-right"></i> Pick-up from Mbeya town or airport</li>
+                                <li><i class="fas fa-angle-right"></i> Drive to Kitulo (approx. 2.5–3 hours)</li>
+                                <li><i class="fas fa-angle-right"></i> Lunch and light afternoon walk in the park</li>
+                                <li><i class="fas fa-angle-right"></i> Overnight at lodge or campsite near Kitulo</li>
+                            </ul>
+                        </div>
+                        <div class="itinerary-panel" id="day2">
+                            <p>After breakfast, begin a full-day exploration of Kitulo. Trek through vast wildflower meadows (in season), hike toward viewpoints overlooking the Kipengere Mountains, and enjoy peaceful picnic breaks. This is also an ideal day for birdwatchers and plant lovers to spot rare and endemic species.</p>
+                            <ul class="check-list">
+                                <li><i class="fas fa-angle-right"></i> Guided full-day hiking and plant observation</li>
+                                <li><i class="fas fa-angle-right"></i> Visit orchid and endemic plant zones</li>
+                                <li><i class="fas fa-angle-right"></i> Birdwatching: Denham's bustard, blue swallow, and more</li>
+                                <li><i class="fas fa-angle-right"></i> Picnic lunch in the park</li>
+                                <li><i class="fas fa-angle-right"></i> Evening relaxation and overnight stay</li>
+                            </ul>
+                        </div>
+                        <div class="itinerary-panel" id="day3">
+                            <p>Enjoy a relaxed breakfast with mountain views before taking a short morning walk or optional visit to a nearby local village for cultural interaction. Afterward, begin your journey back to Mbeya with optional photo stops along the scenic route.</p>
+                            <ul class="check-list">
+                                <li><i class="fas fa-angle-right"></i> Optional morning walk or village visit</li>
+                                <li><i class="fas fa-angle-right"></i> Breakfast at camp or lodge</li>
+                                <li><i class="fas fa-angle-right"></i> Depart for Mbeya</li>
+                                <li><i class="fas fa-angle-right"></i> Drop-off at hotel or airport</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div style="margin-top: 30px;">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Kitulo%20National%20Park,%20Tanzania&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="400"
+                            style="border:0; border-radius:16px; box-shadow: var(--shadow-md);"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Related Destinations -->
+                    <h3 style="margin-top: 40px;">Related Destinations</h3>
+                    <div class="related-grid">
+                        <div class="related-card">
+                            <img src="assets/images/service/r5.jpg" alt="Ruaha National Park">
+                            <div class="card-body">
+                                <h4><a href="ruaha.html">Ruaha National Park</a></h4>
+                                <p>Remote wilderness & game drives</p>
+                                <div class="meta">
+                                    <span><i class="far fa-clock"></i> 3-5 days</span>
+                                    <a href="ruaha.html" style="color: var(--brand-gold); font-weight: 500;">Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-widget" id="book">
+                        <h4>Book Your Kitulo Tour</h4>
+                        <form class="sidebar-booking-form" action="form2.php" method="POST">
+                            <select name="experience" required>
+                                <option value="">Choose Your Experience</option>
+                                <option value="kitulo-national-park">Kitulo National Park</option>
+                                <option value="serengeti">Serengeti Safari</option>
+                                <option value="ngorongoro">Ngorongoro Crater Tour</option>
+                                <option value="kilimanjaro">Mount Kilimanjaro Trek</option>
+                            </select>
+                            <input type="date" name="tour_date" required>
+                            <input type="time" name="tour_time" required>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                                <input type="number" name="adult_tickets" min="0" value="0" placeholder="Adults">
+                                <input type="number" name="youth_tickets" min="0" value="0" placeholder="Youths">
+                                <input type="number" name="child_tickets" min="0" value="0" placeholder="Children">
+                            </div>
+                            <input type="email" name="email" required placeholder="Your Email">
+                            <input type="text" name="country" required placeholder="Your Country">
+                            <textarea name="message" rows="3" placeholder="Additional requests..."></textarea>
+                            <button type="submit" class="btn-submit">Book Now <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4>Tour Information</h4>
+                        <ul class="info-list">
+                            <li><i class="far fa-user-circle"></i> Max Guests <span>30</span></li>
+                            <li><i class="far fa-user-circle"></i> Minimum Age <span>5+ years</span></li>
+                            <li><i class="fas fa-map-marker-alt" style="color:green;"></i> Location <span>Southern Highlands</span></li>
+                            <li><i class="far fa-clock"></i> Duration <span>3 Days</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" style="background: #fff;" id="gallery">
+        <div class="container reveal">
+            <h2 class="section-title" style="text-align:center;">Kitulo Moments</h2>
+            <div class="gallery-grid">
+                <img src="assets/images/service/ki1.jpg" alt="Kitulo meadows">
+                <img src="assets/images/service/ki2.webp" alt="Wildflowers">
+                <img src="assets/images/service/ki3.jpg" alt="Kitulo landscape">
+                <img src="assets/images/service/ki4.jpg" alt="Highland views">
+                <img src="assets/images/service/Kitulo National Park.jpeg" alt="Orchids">
+                <img src="assets/images/gallery/game.webp" alt="Safari">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>About</h4>
+                    <p style="margin-bottom:20px; font-size:14px;">At GUX Safaris, we craft authentic adventures that connect you with wildlife, landscapes, and culture.</p>
+                    <div style="background:#fff; display:inline-block; padding:10px 16px; border-radius:12px;"><img src="assets/images/logo/gux-og-share.png" alt="GUX Safaris" style="width:150px; display:block;"></div>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#popa">Game Drives</a></li>
+                        <li><a href="index.html#popa">Walking Safaris</a></li>
+                        <li><a href="index.html#popa">Camping Safaris</a></li>
+                        <li><a href="index.html#popa">Balloon Safaris</a></li>
+                        <li><a href="index.html#popa">Cultural Tours</a></li>
+                        <li><a href="index.html#popa">Kilimanjaro Trekking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="contact.html">Need a Special Offer?</a></li>
+                        <li><a href="destinations.html">All Destinations</a></li>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="index.html#about">Core Features</a></li>
+                        <li><a href="contact.html">Meet Our Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:var(--brand-highlight); margin-right:8px;"></i> Sokoine Road, Arusha</li>
+                        <li><i class="fas fa-envelope" style="color:var(--brand-highlight); margin-right:8px;"></i> info@guxsafaris.com</li>
+                        <li><i class="fas fa-phone" style="color:var(--brand-highlight); margin-right:8px;"></i> +255 615 743 844</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/guxsafaris" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/guxsafaris" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/255615743844?text=hello%20Tanzania%20Safaris%20Seekers!%20I%20would%20like%20to%20book%20safari." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span style="color: var(--brand-gold);">GUX Safaris</span>, All Rights Reserved</p>
+                <p class="geek-credit">Crafted by <a href="https://geekstudio.tz" target="_blank" rel="noopener">Geek Studio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tawk.to -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6928a9b91e4dc61962a10423/1jb3ddvoq';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+    <script>
+        window.addEventListener('load', () => setTimeout(() => document.getElementById('preloader').classList.add('fade-out'), 800));
+        window.addEventListener('scroll', () => document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 60));
+        document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('mobileMenu').classList.add('active'));
+        document.getElementById('mobileClose').addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('active'));
+        document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('active')));
+
+        const tabBtns = document.querySelectorAll('#itineraryTabs button');
+        const panels = document.querySelectorAll('.itinerary-panel');
+        tabBtns.forEach(btn => btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            panels.forEach(p => p.classList.remove('active'));
+            document.getElementById(btn.dataset.tab).classList.add('active');
+        }));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+    (function() {
+        var msgText = "Thanks! Your request has been received — our GUX Safaris team will reach out on WhatsApp or email shortly.";
+        document.querySelectorAll('form[action$=".php"]').forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"], input[type="submit"]');
+                var original = btn ? btn.innerHTML : null;
+                if (btn) { btn.innerHTML = 'Sending…'; btn.disabled = true; }
+                setTimeout(function() {
+                    var existing = form.querySelector('.gux-form-success');
+                    if (!existing) {
+                        var msg = document.createElement('div');
+                        msg.className = 'gux-form-success';
+                        msg.style.cssText = 'margin-top:16px;padding:14px 18px;background:#3D2314;color:#FAF0D9;border-radius:8px;font-weight:500;font-family:inherit;';
+                        msg.textContent = msgText;
+                        form.appendChild(msg);
+                    }
+                    form.reset();
+                    if (btn) { btn.innerHTML = original; btn.disabled = false; }
+                }, 700);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
